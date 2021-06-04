@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AboutActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppThemeMisc.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/about_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimaryDark" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/about_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/about_application_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:id="@+id/about_application_card_title"
+                        android:padding="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_application"/>
+
+                    <View
+                        android:id="@+id/about_application_card_divider"
+                        android:background="@color/colorAccent"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <com.mursaat.extendedtextview.AnimatedGradientTextView
+                        android:id="@+id/animated_gradient_logotype"
+                        android:text="Unitycorn"
+                        android:paddingTop="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="64sp"
+                        app:colors="@array/animated_logotype_colors"
+                        app:simultaneousColors="2"
+                        app:angle="45"
+                        app:speed="1000"
+                        app:maxFPS="30"
+                        android:textAlignment="center"
+                        />
+
+                    <TextView
+                        android:id="@+id/about_creator"
+                        android:text="@string/about_creator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:textSize="18sp"
+                        android:paddingTop="16dp" />
+
+                    <TextView
+                        android:id="@+id/about_creator_copyright_notice_1"
+                        android:text="@string/about_copyright_notice_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="?android:attr/selectableItemBackground" />
+
+                    <TextView
+                        android:id="@+id/about_creator_copyright_notice_2"
+                        android:text="@string/about_copyright_notice_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:paddingBottom="16dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/about_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@android:color/black"
+                        android:id="@+id/about_card_title"
+                        android:padding="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/about_card_title"/>
+
+                    <View
+                        android:id="@+id/about_card_divider"
+                        android:background="@color/colorAccent"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
+                    <TextView
+                        android:id="@+id/about_item_website"
+                        android:text="@string/about_card_item_website"
+                        app:drawableRightCompat="@drawable/about_ic_website"
+                        android:onClick="aboutCardItemClick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/about_item_email"
+                        android:text="@string/about_card_item_email"
+                        app:drawableRightCompat="@drawable/about_ic_email"
+                        android:onClick="aboutCardItemClick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/about_item_instagram"
+                        android:text="@string/about_card_item_instagram"
+                        app:drawableRightCompat="@drawable/about_ic_instagram"
+                        android:onClick="aboutCardItemClick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/about_item_telegram"
+                        android:text="@string/about_card_item_telegram"
+                        app:drawableRightCompat="@drawable/about_ic_telegram"
+                        android:onClick="aboutCardItemClick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="@color/colorAccent" />
+
+                    <TextView
+                        android:id="@+id/about_item_virgool"
+                        android:text="@string/about_card_item_virgool"
+                        app:drawableRightCompat="@drawable/about_ic_virgool"
+                        android:onClick="aboutCardItemClick"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:padding="16dp"
+                        android:clickable="true"
+                        android:drawablePadding="16dp"
+                        android:drawableTint="@color/colorAccent" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/open_source_libs_button"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_gravity="center_horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@android:color/white"
+                app:rippleColor="@android:color/white"
+                android:text="@string/about_button_open_source" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/intro_button"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_gravity="center_horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@android:color/white"
+                app:rippleColor="@android:color/white"
+                android:text="@string/about_button_intro" />
+
+            <TextView
+                android:id="@+id/about_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:textSize="4sp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ari_bullet_paragraph_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginTop="16dp"
+    android:background="@color/articleColor">
+
+    <ImageView
+        android:id="@+id/ari_bullet_paragraph_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:paddingTop="4dp"
+        android:tint="@color/colorAccent"
+        app:srcCompat="@drawable/bullet" />
+
+    <TextView
+        android:id="@+id/ari_bullet_paragraph_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="16dp"
+        android:lineSpacingMultiplier="1.5"
+        android:gravity="right"
+        android:textDirection="rtl"
+        android:text="Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+        android:textColor="@color/normalTextColor"
+        android:textSize="16sp" />
+</LinearLayout>

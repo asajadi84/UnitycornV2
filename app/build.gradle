@@ -1,0 +1,93 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "ir.unitycorn.app"
+        minSdkVersion 18
+        targetSdkVersion 29
+        versionCode 4
+        versionName "2.0.3"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        android.defaultConfig.vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //Material Design Additional Support
+    implementation 'com.google.android.material:material:1.2.0-alpha03'
+
+    //Splash Activity Text Effect
+    implementation 'com.hanks:htextview-base:0.1.6'
+    implementation 'com.hanks:htextview-evaporate:0.1.6'
+
+    //Intro Activity Onboarding
+    implementation 'com.github.chyrta:AndroidOnboarder:0.7'
+
+    //Change App Font To Iran Sans
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+
+    //Make Toast Messages Beautiful Using Toasty
+    implementation 'com.github.GrenderG:Toasty:1.4.2'
+
+    //Implenet RTL ViewPager In Main Activity
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    //Color Picker Library
+    implementation 'com.azeesoft.lib.colorpicker:colorpicker:1.0.8@aar'
+
+    //App Shortcuts Library
+    implementation 'com.github.matthiasrobbers:shortbread:1.0.2'
+    annotationProcessor 'com.github.matthiasrobbers:shortbread-compiler:1.0.2'
+
+    //Bubble Seek Bar
+    implementation 'com.xw.repo:bubbleseekbar:3.20-lite'
+
+    //Room Library
+    implementation "androidx.room:room-runtime:2.2.3"
+    annotationProcessor "androidx.room:room-compiler:2.2.3"
+
+    //MVVM Library
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+
+    //Flex Box Layout Library
+    implementation 'com.google.android:flexbox:2.0.0'
+
+    //Tap Sell Library
+    implementation 'ir.tapsell.sdk:tapsell-sdk-android:4.3.7'
+
+    //Article Activity Guide Library
+    implementation 'com.getkeepsafe.taptargetview:taptargetview:1.12.0'
+
+    //Article Sticky Header Library
+    implementation 'com.github.qiujayen:sticky-layoutmanager:1.0.1'
+
+    //Code View Library
+    implementation 'com.github.kbiakov:CodeView-Android:1.3.2'
+
+    //View Image Library
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+    //Search Results RecyclerView Animation Library
+    implementation 'jp.wasabeef:recyclerview-animators:3.0.0'
+
+    //Animated Gradient TextView
+    implementation 'com.github.Mursaat:AnimatedGradientTextView:v0.0.6'
+
+}

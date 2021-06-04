@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#29434e</color>
+    <color name="colorPrimaryDark">#1c313a</color>
+    <color name="colorAccent">#fec400</color>
+    <color name="colorAccentDark">#D3A400</color>
+
+    <color name="applicationColor">#f0f0f0</color>
+    <color name="articleColor">#ffffff</color>
+    <color name="unreadColor">#ff5722</color>
+    <color name="transparentWhite">#4dffffff</color>
+    <color name="transparentBlack">#34000000</color>
+
+    <color name="applicationColorDark">#1c313a</color>
+    <color name="normalTextColorDark">#e1e1e1</color>
+    <color name="normalSubTextColorDark">#ACACAC</color>
+    <color name="normalTextColor">#636363</color>
+    <color name="normalSubTextColor">#999999</color>
+</resources>

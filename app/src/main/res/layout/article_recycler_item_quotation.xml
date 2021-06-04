@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ari_quotation_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="16dp"
+    android:background="@color/articleColor">
+
+    <TextView
+        android:id="@+id/ari_quotation_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingMultiplier="1.5"
+        android:textDirection="rtl"
+        android:padding="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/normalTextColor"
+        android:textSize="20sp" />
+</LinearLayout>

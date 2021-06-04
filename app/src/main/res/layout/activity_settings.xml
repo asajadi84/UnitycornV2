@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.SettingsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppThemeMisc.AppBarOverlay"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/settings_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimaryDark"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/settings_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/settings_card_dark_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/settings_title_dark_mode"
+                        android:textColor="@android:color/black"
+                        android:padding="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_dark_mode_title"
+                        android:layout_alignParentRight="true"/>
+
+
+                    <CheckBox
+                        android:id="@+id/dark_mode_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_alignParentLeft="true"/>
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/settings_card_font_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/settings_title_font_size"
+                        android:textColor="@android:color/black"
+                        android:padding="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_font_size_title"/>
+
+                    <com.xw.repo.BubbleSeekBar
+                        android:id="@+id/font_size_seek_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:bsb_track_color="@color/normalTextColor"
+                        app:bsb_second_track_color="@color/colorAccent"
+                        app:bsb_bubble_color="@color/colorAccent"
+                        app:bsb_bubble_text_color="@android:color/white"
+                        app:bsb_show_thumb_text="true"
+                        app:bsb_touch_to_seek="true"
+                        app:bsb_rtl="true"
+                        app:bsb_min="12"
+                        app:bsb_max="24"
+                        app:bsb_progress="20"/>
+
+                    <TextView
+                        android:id="@+id/font_size_text_view"
+                        android:textColor="@color/normalTextColor"
+                        android:paddingRight="16dp"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_font_size_example"/>
+
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/settings_card_distinct_unread"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/settings_title_distinct_unread"
+                            android:textColor="@android:color/black"
+                            android:paddingRight="16dp"
+                            android:paddingLeft="16dp"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_distinct_unread_title"
+                            android:layout_alignParentRight="true"/>
+
+                        <CheckBox
+                            android:id="@+id/distinct_unread_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_alignParentLeft="true"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/distinct_unread_articles_text_view"
+                        android:textColor="@color/normalTextColor"
+                        android:paddingRight="16dp"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="@string/settings_distinct_unread_description"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/settings_card_sticky_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/settings_title_sticky_notification"
+                            android:textColor="@android:color/black"
+                            android:paddingRight="16dp"
+                            android:paddingLeft="16dp"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_sticky_notification_title"
+                            android:layout_alignParentRight="true"/>
+
+                        <CheckBox
+                            android:id="@+id/sticky_notification_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_alignParentLeft="true"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/sticky_notification_text_view"
+                        android:textColor="@color/normalTextColor"
+                        android:paddingRight="16dp"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="@string/settings_sticky_notification_description"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/settings_card_article_sticky_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/settings_title_article_sticky_header"
+                            android:textColor="@android:color/black"
+                            android:paddingRight="16dp"
+                            android:paddingLeft="16dp"
+                            android:paddingTop="16dp"
+                            android:paddingBottom="4dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/settings_article_sticky_header_title"
+                            android:layout_alignParentRight="true"/>
+
+                        <CheckBox
+                            android:id="@+id/article_sticky_header_checkbox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_alignParentLeft="true"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/article_sticky_header_text_view"
+                        android:textColor="@color/normalTextColor"
+                        android:paddingRight="16dp"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="16dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="@string/settings_article_sticky_header_description"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/restore_to_default_button"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_gravity="center_horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/white"
+                app:rippleColor="@color/white"
+                android:text="@string/settings_reset_button_text"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

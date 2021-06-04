@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/articles_table_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp">
+
+    <LinearLayout
+        android:id="@+id/articles_table_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="4dp">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/articles_table_title_container"
+            app:alignItems="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                app:layout_minWidth="56dp"
+                app:layout_minHeight="44dp"
+                android:layout_width="56dp"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:id="@+id/articles_table_title_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="4dp"
+                    app:srcCompat="@drawable/category_gamedev"
+                    android:layout_marginRight="12dp"
+                    android:tint="@color/colorAccent"
+                    android:background="@drawable/color_primary_solid_circle"/>
+
+                <TextView
+                    android:id="@+id/articles_table_title_unread_badge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:layout_gravity="right"
+                    android:textSize="12sp"
+                    android:paddingRight="8dp"
+                    android:paddingLeft="8dp"
+                    android:background="@drawable/unread_solid_rounded_rectangle"
+                    android:text="12" />
+
+            </FrameLayout>
+
+
+
+            <TextView
+                android:id="@+id/articles_table_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center_vertical"
+                android:textSize="20sp"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:text="لورم ایپسوم" />
+
+            <TextView
+                app:layout_minWidth="42dp"
+                android:id="@+id/articles_table_title_premium_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:background="@drawable/primary_solid_rounded_rectangle"
+                android:text="@string/main_premium_tag" />
+
+
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:paddingTop="8dp"
+            android:paddingRight="56dp"
+            android:id="@+id/articles_table_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"/>
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
